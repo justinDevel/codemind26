@@ -72,9 +72,9 @@ def main():
         print(f"\nLoading {hf_path}...")
         try:
             if subset:
-                ds = load_dataset(hf_path, subset, split=split, streaming=True, trust_remote_code=True)
+                ds = load_dataset(hf_path, subset, split=split, streaming=True)
             else:
-                ds = load_dataset(hf_path, split=split, streaming=True, trust_remote_code=True)
+                ds = load_dataset(hf_path, split=split, streaming=True)
 
             count = 0
             for sample in ds:
